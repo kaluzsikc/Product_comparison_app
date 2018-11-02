@@ -15,7 +15,7 @@ Full-stack application (Java/React) that allows users to search across Amazon’
 
 ### BACK-END
 * Scrapes each individual website (by ASIN)
-* Returns an API with a list of product links, prices, description and image
+* Returns an API with a list of product links, prices (converted), description and image
 * Show potential money saved (highest - lowest price) **[EXT]**
 
 ### Domains
