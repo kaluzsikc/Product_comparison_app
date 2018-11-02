@@ -3,20 +3,20 @@
 ## Summary
 Full-stack application (Java/React) that allows users to search across Amazon’s multiple international websites to compare prices on searched products. It will allow the user to compare prices between countries and how much money they could potentially save.
 
-## MVP
+## Structure
 
 ### FRONT-END
 * Search product input
 * Display list of results (Country, Description, Rating, Currency, Price, Buy Button)
-* Order by price/description [EXT]
-* Highlight cheapest option [EXT]
-* Currency selection [EXT]
-* Grab Amazon's most sold items (from related category searched by user) [EXT]
+* Currency selection
+* Order by price/description **[EXT]**
+* Highlight cheapest option **[EXT]**
+* Grab Amazon's most sold items (from related category searched by user) **[EXT]**
 
 ### BACK-END
 * Scrapes each individual website (by ASIN)
 * Returns an API with a list of product links, prices, description and image
-* Show potential money saved (highest - lowest price) [EXT]
+* Show potential money saved (highest - lowest price) **[EXT]**
 
 ### Domains
 * China - amazon.cn
