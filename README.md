@@ -12,6 +12,7 @@ Full-stack application (Java/React) that allows users to search across Amazon’
 * Order by price/description **[EXT]**
 * Highlight cheapest option **[EXT]**
 * Grab Amazon's most sold items (from related category searched by user) **[EXT]**
+* Loading logo **[EXT]**
 
 ### BACK-END
 * Scrapes each individual website (by ASIN)
