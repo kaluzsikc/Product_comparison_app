@@ -7,6 +7,7 @@ class SearchBox extends Component {
         super(props)
         this.state = {
             query: '',
+            currency:'',
             results: []
         }
 
@@ -26,18 +27,21 @@ class SearchBox extends Component {
         event.preventDefault();
         console.log('form submitted');
         const text = this.state.text.trim();
-        if (!text) {
+        const currency = this.state.currency;
+        if (!text || !currency) {
             return;
         }
         // const newSearch = { text: text };
 
         console.log('text:',text);
-        this.setState({ text: '' })
+        console.log('currency:', currency);
+        this.setState({ text: '' , currency: ''})
+
     }
 
-//     handleChange(event) {
-//         const onCurrencySelected = event.target.value;
-// }
+    handleChange(event) {
+        const onCurrencySelected = event.target.value;
+}
     render() {
         return (
             <div>
@@ -48,7 +52,8 @@ class SearchBox extends Component {
                         value={this.state.text}
                         onChange={this.handleInput}
                     />
-                    <select id='currency-seelctor' defaultValue="default">
+                    <select id='currency-seelctor' defaultValue="default" value={this.state.currency}
+                        onChange={this.handleChange}>
                         <option disabled value="default">Select currency</option>
                         <option value="GBP">£ - GBP</option>
                         <option value="USD">$ - USD</option>
@@ -61,6 +66,7 @@ class SearchBox extends Component {
                         <option value="Lira">₺ - TRY</option>
                         <option value="Peso">Mex$ - MXN</option>
                         <option value="AUDollar">$ - AUD</option>
+                        
                     </select>
                     <input type="submit" value="Search" />
                     {/* <p>{this.state.query}</p> */}
