@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Results from './ResultBox';
-
 
 class SearchBox extends Component {
 
@@ -33,11 +31,13 @@ class SearchBox extends Component {
         }
         // const newSearch = { text: text };
 
-        //reset the form fields
-        console.log(text);
+        console.log('text:',text);
         this.setState({ text: '' })
     }
 
+//     handleChange(event) {
+//         const onCurrencySelected = event.target.value;
+// }
     render() {
         return (
             <div>
@@ -52,7 +52,20 @@ class SearchBox extends Component {
                     <p>{this.state.query}</p>
                 </form>
             
-                
+                <select id='currency-seelctor' defaultValue="default">
+                    <option disabled value="default">Select currency</option>
+                    <option value="GBP">Pound Sterling</option>
+                    <option value="USD">US Dolar</option>
+                    <option value="EURO">Euro</option>
+                    <option value="Yen">Japanese Yen</option>
+                    <option value="Yuan">Chinese Yuan</option>
+                    <option value="Real">Brazilian Real</option>
+                    <option value="Rupee">Indian Rupee</option>
+                    <option value="SinDollar">Singapore Dollar</option>
+                    <option value="Lira">Turkish Lira</option>
+                    <option value="Peso">Mexican Peso</option>
+                    <option value="AUDollar">Australian Dollar</option>
+                </select>
             </div>
         )
     }
