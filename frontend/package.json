@@ -1,16 +1,12 @@
 {
-  "name": "product_comparison_app",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^6.5.4",
-    "material-ui": "^0.20.2",
-    "material-ui-search-bar": "^0.4.2",
-    "react": "^15.5.4",
+    "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "react-search-box": "^1.0.1"
+    "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
