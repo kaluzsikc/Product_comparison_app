@@ -12,7 +12,9 @@ class SearchBox extends Component {
         }
 
         this.handleInput = this.handleInput.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     getInfo = () => {
@@ -23,6 +25,10 @@ class SearchBox extends Component {
         this.setState({ text: event.target.value })
     }
 
+    handleChange(event) {
+        this.setState({ currency: event.target.value })
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         console.log('form submitted');
@@ -31,17 +37,12 @@ class SearchBox extends Component {
         if (!text || !currency) {
             return;
         }
-        // const newSearch = { text: text };
 
         console.log('text:',text);
         console.log('currency:', currency);
         this.setState({ text: '' , currency: ''})
-
     }
 
-    handleChange(event) {
-        const onCurrencySelected = event.target.value;
-}
     render() {
         return (
             <div>
@@ -52,9 +53,8 @@ class SearchBox extends Component {
                         value={this.state.text}
                         onChange={this.handleInput}
                     />
-                    <select id='currency-seelctor' defaultValue="default" value={this.state.currency}
-                        onChange={this.handleChange}>
-                        <option disabled value="default">Select currency</option>
+                    <select id='currency-seelctor' value={this.state.currency} onChange={this.handleChange}>
+                        <option default value="default">Select currency</option>
                         <option value="GBP">£ - GBP</option>
                         <option value="USD">$ - USD</option>
                         <option value="EURO">€ - EURO</option>
