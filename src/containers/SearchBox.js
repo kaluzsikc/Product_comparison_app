@@ -48,11 +48,25 @@ class SearchBox extends Component {
                         value={this.state.text}
                         onChange={this.handleInput}
                     />
+                    <select id='currency-seelctor' defaultValue="default">
+                        <option disabled value="default">Select currency</option>
+                        <option value="GBP">£ - GBP</option>
+                        <option value="USD">$ - USD</option>
+                        <option value="EURO">€ - EURO</option>
+                        <option value="Yen">¥ - JPY</option>
+                        <option value="Yuan">¥ - CNY</option>
+                        <option value="Real">R$ - BRL</option>
+                        <option value="Rupee">₹ - INR</option>
+                        <option value="SinDollar">$ - SGD</option>
+                        <option value="Lira">₺ - TRY</option>
+                        <option value="Peso">Mex$ - MXN</option>
+                        <option value="AUDollar">$ - AUD</option>
+                    </select>
                     <input type="submit" value="Search" />
                     <p>{this.state.query}</p>
                 </form>
             
-                <select id='currency-seelctor' defaultValue="default">
+                {/* <select id='currency-seelctor' defaultValue="default">
                     <option disabled value="default">Select currency</option>
                     <option value="GBP">Pound Sterling</option>
                     <option value="USD">US Dolar</option>
@@ -65,7 +79,7 @@ class SearchBox extends Component {
                     <option value="Lira">Turkish Lira</option>
                     <option value="Peso">Mexican Peso</option>
                     <option value="AUDollar">Australian Dollar</option>
-                </select>
+                </select> */}
             </div>
         )
     }
